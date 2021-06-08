@@ -1,31 +1,7 @@
-<p>Páginas - pages works!</p>
-<ul>
-    <li>
-        <a [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a> 
-    </li>
-    <li>
-        <a [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</a> 
-    </li>
-    <li>
-        <a [routerLink]="['/about']" routerLinkActive="router-link-active">About</a> 
-    </li>
-    <li>
-        <a [routerLink]="['/blog/post']" routerLinkActive="router-link-active">Blog Post</a> 
-    </li>
-    <li>
-        <a [routerLink]="['/blog/home']" routerLinkActive="router-link-active">Blog Home</a> 
-    </li>
-    <li>
-        <a [routerLink]="['/portfolio/item']" routerLinkActive="router-link-active">Portfolio Item</a> 
-    </li>
-    <li>
-        <a [routerLink]="['/portfolio/overview']" routerLinkActive="router-link-active">Portfolio Overview</a> 
-    </li>
-    <li>
-        <a [routerLink]="['/faq']" routerLinkActive="router-link-active">FAQ</a> 
-    </li>
-</ul>
-<app-navbar></app-navbar>
-<app-header></app-header>
-<router-outlet></router-outlet>
+<main class="flex-shrink-0">
+  <app-navbar></app-navbar>
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+</main>
+
 <app-footer></app-footer>

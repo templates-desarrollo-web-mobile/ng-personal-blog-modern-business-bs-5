@@ -1,1 +1,82 @@
-<p>navbar works!</p>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+      <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="router-link-active">Start Bootstrap</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/about']" routerLinkActive="router-link-active">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/pricing']" routerLinkActive="router-link-active">Pricing</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/faq']" routerLinkActive="router-link-active">FAQ</a></li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              id="navbarDropdownBlog"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Blog</a
+            >
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownBlog"
+            >
+              <li>
+                <a class="dropdown-item" [routerLink]="['/blog/home']" routerLinkActive="router-link-active">Blog Home</a>
+              </li>
+              <li>
+                <a class="dropdown-item" [routerLink]="['/blog/post']" routerLinkActive="router-link-active">Blog Post</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              id="navbarDropdownPortfolio"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Portfolio</a
+            >
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownPortfolio"
+            >
+              <li>
+                <a class="dropdown-item" [routerLink]="['/portfolio/overview']" routerLinkActive="router-link-active"
+                  >Portfolio Overview</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" [routerLink]="['/portfolio/item']" routerLinkActive="router-link-active"
+                  >Portfolio Item</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
