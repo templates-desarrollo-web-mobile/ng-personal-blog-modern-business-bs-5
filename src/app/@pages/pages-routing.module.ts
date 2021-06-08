@@ -42,6 +42,10 @@ const routes: Routes = [
       {
         path: 'portfolio/overview',
         loadChildren: () => import('./portfolio/overview/overview.module').then(m => m.OverviewModule)
+      },
+      {
+        path: 'gallery',
+        loadChildren: () => import('./gallery/gallery.module').then(m => m.GalleryModule)
       }
     ]
   }
