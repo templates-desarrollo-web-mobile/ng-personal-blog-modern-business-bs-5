@@ -19,19 +19,20 @@
           <!-- To make this form functional, sign up at-->
           <!-- https://startbootstrap.com/solution/contact-forms-->
           <!-- to get an API token!-->
-          <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+          <form id="contactForm" (ngSubmit)="onSubmit()" [formGroup]="contactForm">
             <!-- Name input-->
             <div class="form-floating mb-3">
               <input
                 class="form-control"
                 id="name"
                 type="text"
-                placeholder="Enter your name..."
+                formControlName="name" class="form-control"
+                placeholder="Introduzca su nombre / apellidos"
                 data-sb-validations="required"
               />
-              <label for="name">Full name</label>
+              <label for="name">Nombre / Apellidos</label>
               <div class="invalid-feedback" data-sb-feedback="name:required">
-                A name is required.
+                Nombre y Apellidos es requerido.
               </div>
             </div>
             <!-- Email address input-->
@@ -40,7 +41,8 @@
                 class="form-control"
                 id="email"
                 type="email"
-                placeholder="name@example.com"
+                formControlName="email" class="form-control"
+                placeholder="mugan86@gmail.com"
                 data-sb-validations="required,email"
               />
               <label for="email">Email address</label>
@@ -57,6 +59,7 @@
                 class="form-control"
                 id="phone"
                 type="tel"
+                formControlName="phone" class="form-control"
                 placeholder="(123) 456-7890"
                 data-sb-validations="required"
               />
@@ -71,6 +74,7 @@
                 class="form-control"
                 id="message"
                 type="text"
+                formControlName="message" class="form-control"
                 placeholder="Enter your message here..."
                 style="height: 10rem"
                 data-sb-validations="required"
@@ -106,7 +110,8 @@
             <!-- Submit Button-->
             <div class="d-grid">
               <button
-                class="btn btn-primary btn-lg disabled"
+                class="btn btn-primary btn-lg"
+                [disabled]="contactForm.invalid"
                 id="submitButton"
                 type="submit"
               >
